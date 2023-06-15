@@ -27,6 +27,7 @@ const firstConversion = function(testString) {
 
 const firstEncryption = firstConversion(testString);
 
+console.log(firstEncryption)
 //take the first encryption array and convert it to a quaternary array
 //is there a quarternary notation in javascript>?
 
@@ -35,7 +36,7 @@ const secondConversion = function(firstEncryption) {
   let quarterConversion = [];
 
   firstEncryption.map((chars)  => {
-    quarterConversion.push(chars.toString(4))
+    quarterConversion.push(chars.toString(3))
   });
 
   return quarterConversion;
@@ -43,6 +44,7 @@ const secondConversion = function(firstEncryption) {
 
 const yourEncryptedString = secondConversion(firstEncryption)
 
+console.log(yourEncryptedString)
 //now reverse the process
 
 const firstDeCrypt = function(yourEncryptedString) {
