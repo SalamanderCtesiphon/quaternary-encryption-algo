@@ -35,4 +35,33 @@ const secondConversion = function(firstEncryption) {
 
 const yourEncryptedString = secondConversion(firstEncryption)
 
-console.log(yourEncryptedString);
+
+
+//now reverse the process
+
+const firstDeCrypt = function(yourEncryptedString) {
+  let utilityArray = [];
+  yourEncryptedString.map((char) => {
+    let num = Number(char)
+    let sum = 0;
+    while (num > 33) {
+      num -= 100;
+      sum += 9;
+    }
+    while (num > 3) {
+      num -= 10;
+      sum += 3;
+    }
+    while (num > 0) {
+      num -= 1;
+      sum += 1;
+    }
+   
+    utilityArray.push(sum)
+  })
+  return utilityArray
+};
+
+const decryptionHolder = firstDeCrypt(yourEncryptedString)
+
+console.log(decryptionHolder)
