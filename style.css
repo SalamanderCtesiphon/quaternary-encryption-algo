@@ -50,7 +50,6 @@ h1 {
 }
 
 
-
 .info {
   padding: 2em 0;
   display: flex;
@@ -68,6 +67,8 @@ img {
   padding: 1em;
   width: 40vw;
   margin: 2em;
+  object-fit: cover;
+  object-position: center;
 }
 
 .input {
