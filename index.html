@@ -17,14 +17,26 @@
       <p>First step, input a simple one sentence message in all lowercase letters with no punctuation.</p>
     </div>
     <div class="container">
-      <label for="text" class="label">1. Input your message for encryption:</label>
+      <label for="text" class="label"><h1>1. </h1> <p>Input your message for encryption:</p></label>
       <div class="utility-container">
-        <input type="text" name="text" class="input" placeholder="Dark Twitch Search">
+        <input type="text" name="text" class="input" id='msg' placeholder="Dark Twitch Search">
         <button class="search__btn">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22">
           <path d="M18.031 16.6168L22.3137 20.8995L20.8995 22.3137L16.6168 18.031C15.0769 19.263 13.124 20 11 20C6.032 20 2 15.968 2 11C2 6.032 6.032 2 11 2C15.968 2 20 6.032 20 11C20 13.124 19.263 15.0769 18.031 16.6168ZM16.0247 15.8748C17.2475 14.6146 18 12.8956 18 11C18 7.1325 14.8675 4 11 4C7.1325 4 4 7.1325 4 11C4 14.8675 7.1325 18 11 18C12.8956 18 14.6146 17.2475 15.8748 16.0247L16.0247 15.8748Z" fill="#efeff1"></path>
         </svg>
       </button>
+      </div>
+      <div class="info">
+        <h1>2.</h1><p> On clicking the search icon the following function is run:</p>
+        <img src="/images/firrstEncryption.png" alt="code snippet of the first encryption function">
+        <p>It takes the message that the user input and iterates over the string</p>
+        <p>comparing each character in the message to the elements in the array returning the index of the character in the array.</p>
+        <p>Which would give this for a test situation: abc is converted to an array containing the idices of the characters</p>
+        <p>abc => [ 0, 1, 2]</p>
+        <p>For this example the results are: <div class="result"></div></p>
+      </div>
+      <div class="info">
+        <h1>3.</h1><p></p>
       </div>
     </div>
   </div>
