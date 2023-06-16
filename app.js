@@ -8,8 +8,6 @@ searchBtn.addEventListener('click', (e) => {
   console.log(firstEncryption);
 });
 
-console.log(testString);
-
 
 
 
@@ -44,7 +42,19 @@ const firstConversion = function(testString) {
 const firstEncryption = firstConversion(testString);
 
 const firstResults = document.querySelector('.result');
-const text = firstEncryption;
+const text = testString;
+const display = text.toString();
+firstResults.textContent = display
+
+const firstEncodedArray = document.querySelector('.result2');
+const text2 = firstEncryption;
+const display2 = firstEncryption.toString();
+firstEncodedArray.textContent = display2
+
+
+
+
+
 
 
 //take the first encryption array and convert it to a quaternary array
@@ -61,9 +71,23 @@ const secondConversion = function(firstEncryption) {
   return quarterConversion;
 };
 
+
+
+
+
+
+
+
+
 const yourEncryptedString = secondConversion(firstEncryption)
 
-console.log(yourEncryptedString)
+
+const secondEncodedArray = document.querySelector('.result3');
+const text3 = yourEncryptedString.toString();
+
+secondEncodedArray.textContent = text3;
+console.log(text3)
+
 //now reverse the process
 
 const firstDeCrypt = function(yourEncryptedString) {
@@ -96,7 +120,6 @@ const firstDeCrypt = function(yourEncryptedString) {
 
 const decryptionHolder = firstDeCrypt(yourEncryptedString)
 
-console.log(decryptionHolder)
 
 //we receive an array containing the indices of the letters that
 //need to be returned
@@ -124,6 +147,5 @@ const finalReversion = function(decryptionHolder) {
 const finalVersion = finalReversion(decryptionHolder);
 
 const ultimateVersion = finalVersion.toString();
-console.log(ultimateVersion);//a,b,c,.,e,f,g,.,x,y,z
+
 const runningOutOfVariableNames = ultimateVersion.replaceAll(',', '');
-console.log(runningOutOfVariableNames);
