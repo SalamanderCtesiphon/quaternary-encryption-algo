@@ -1,8 +1,19 @@
-const testString = 'this is a quite weird zoo but i like it';
+const testString = document.getElementById('msg').value;
 // take a string and map over it comparing the character to the
 //one in the array returning the index of that character
 
-console.log(testString)
+const searchBtn = document.querySelector('.search__btn');
+searchBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+  console.log(firstEncryption);
+});
+
+console.log(testString);
+
+
+
+
+
 const firstConversion = function(testString) {
 
   const firstCypher = [ 
@@ -26,9 +37,16 @@ const firstConversion = function(testString) {
   return decimalConversion;
 };
 
+
+
+
+
 const firstEncryption = firstConversion(testString);
 
-console.log(firstEncryption)
+const firstResults = document.querySelector('.result');
+const text = firstEncryption;
+
+
 //take the first encryption array and convert it to a quaternary array
 //is there a quarternary notation in javascript>?
 
