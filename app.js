@@ -1,13 +1,14 @@
-const testString = 'zoology is quite wizard';
+const testString = 'this is a quite weird zoo but i like it';
 // take a string and map over it comparing the character to the
 //one in the array returning the index of that character
 
+console.log(testString)
 const firstConversion = function(testString) {
 
   const firstCypher = [ 
     'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 
     'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v',
-    'w', 'x', 'y', 'z', '.', ',', ' ' 
+    'w', 'x', 'y', 'z', ' ' 
   ];
 
   let decimalConversion = [];
@@ -87,7 +88,7 @@ const finalReversion = function(decryptionHolder) {
   const firstCypher = [ 
     'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 
     'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v',
-    'w', 'x', 'y', 'z', '.', ',', ' ' 
+    'w', 'x', 'y', 'z', ' ' 
   ];
 
   let utilityHolder = [];
@@ -105,6 +106,6 @@ const finalReversion = function(decryptionHolder) {
 const finalVersion = finalReversion(decryptionHolder);
 
 const ultimateVersion = finalVersion.toString();
-console.log(ultimateVersion);
+console.log(ultimateVersion);//a,b,c,.,e,f,g,.,x,y,z
 const runningOutOfVariableNames = ultimateVersion.replaceAll(',', '');
 console.log(runningOutOfVariableNames);
