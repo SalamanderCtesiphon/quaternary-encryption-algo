@@ -114,7 +114,7 @@ img {
   background-color: rgba(54, 54, 56, 1);
 }
 
-.result, .result-container {
+.result, .result-container, .third-step-holder {
   border: 1px solid gray;
   background-color: #53535f;
   padding: 1em;
@@ -125,4 +125,13 @@ img {
 
 .result-container {
   display: flex;
+
+}
+
+footer {
+  margin-top: 20vh;
+  height: 8vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
