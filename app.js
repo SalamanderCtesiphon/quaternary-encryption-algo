@@ -4,7 +4,6 @@ const testString = document.getElementById('msg').value;
 
 const searchBtn = document.querySelector('.search__btn');
 searchBtn.addEventListener('click', (e) => {
-  e.preventDefault();
   console.log(firstEncryption);
 });
 
@@ -86,7 +85,9 @@ const secondEncodedArray = document.querySelector('.result3');
 const text3 = yourEncryptedString.toString();
 
 secondEncodedArray.textContent = text3;
-console.log(text3)
+
+
+
 
 //now reverse the process
 
@@ -117,6 +118,12 @@ const firstDeCrypt = function(yourEncryptedString) {
 
   return utilityArray
 };
+
+
+
+
+
+
 
 const decryptionHolder = firstDeCrypt(yourEncryptedString)
 
