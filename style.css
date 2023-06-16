@@ -10,8 +10,16 @@ body {
 }
 
 .app {
-  padding: 2em;
+  padding: 1em;
   display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: baseline;
+  min-height: 100vh;
+}
+
+header {
+  padding: 1em;
 }
 
 .container {
@@ -19,7 +27,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 35px;
+  height: auto;
 }
 
 .label {
@@ -62,7 +70,7 @@ body {
   background-color: rgba(42, 42, 45, 1);
   border-top-right-radius: 7px;
   border-bottom-right-radius: 7px;
-  height: 100%;
+  height: fill;
   width: 30px;
   display: flex;
   justify-content: center;
