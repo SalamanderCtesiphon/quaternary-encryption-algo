@@ -127,6 +127,13 @@ const firstDeCrypt = function(yourEncryptedString) {
 
 const decryptionHolder = firstDeCrypt(yourEncryptedString)
 
+const thirdStepHolder = document.querySelector('.result4');
+const text4 = decryptionHolder.toString();
+thirdStepHolder.textContent = text4;
+
+
+
+
 
 //we receive an array containing the indices of the letters that
 //need to be returned
@@ -151,8 +158,23 @@ const finalReversion = function(decryptionHolder) {
   return utilityHolder;
 };
 
+
+
+
+
+
+
+
 const finalVersion = finalReversion(decryptionHolder);
+
+const fifthStepHolder = document.querySelector('.result5');
+const text5 = finalVersion.toString();
+fifthStepHolder.textContent = text5;
+
 
 const ultimateVersion = finalVersion.toString();
 
 const runningOutOfVariableNames = ultimateVersion.replaceAll(',', '');
+
+const sixthStepHolder = document.querySelector('.result6');
+sixthStepHolder.textContent = runningOutOfVariableNames;
