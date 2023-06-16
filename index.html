@@ -10,7 +10,7 @@
 <body>
   <div class="app">
     <header>
-      <h1>Quartenary Encryption Algorithm</h1>
+      <h1>Ternary Encryption Algorithm</h1>
     </header>
     <div class="info">
       <p>This is a demo of an encryption algorithm that I wrote. I will walk throught the steps.</p>
@@ -44,9 +44,9 @@
       <div class="result-container">[<div class="result2"></div>]</div>
     </div>
     <div class="info">
-      <div class="card-title"><h1>3.</h1><p>Next the array of decimal numbers is converted to an array of quaternary numbers </p></div>
+      <div class="card-title"><h1>3.</h1><p>Next the array of decimal numbers is converted to an array of ternary numbers </p></div>
       <img src="/images/secondEncryption.png" alt="code snippet of the second encryption function">
-      <p>This is what the quaternary array would look like for our input:</p>
+      <p>This is what the ternary array would look like for our input:</p>
      
       <br>
       <div class="result-container">[<div class="result3"></div>]</div>
@@ -54,15 +54,34 @@
     </div>
     <div class="info">
       <div class="card-title"><h1>4.</h1><p>Now we begin the decryption process.</p></div>
-      <p>The array of quaternary numbers is converted back to decimal.</p>
-      <p>This function I wrote myself because there is not a quaternary notation in javascript.</p>
+      <p>The array of ternary numbers is converted back to decimal.</p>
+      <p>This function I wrote myself because there is not a ternary notation in javascript.</p>
       <img src="/images/thirdStep.png" alt="code snippet of the first decryption function">
-      <p>The maximum range of our numbers in quaternary notation would be 221, which represents </p>
-      <p>the decimal number 26. This is because out origninal encryption key was the array of </p>
+      <p>The maximum range of our numbers in ternary notation would be 222, which represents </p>
+      <p>the decimal number 26. This is because our origninal encryption key was the array of </p>
       <p>the alphabet plus a final element to represent a space.</p>
-      <p>Which would be an array with indices from 0 to 26.</p>
+      <p>Which would be an array of 27 characters with indices from 0 to 26.</p>
     </div>
+    <div class="result-container">[<div class="result4"></div>]</div>
+    <div class="info">
+      <div class="card-title"><h1>5. </h1><p>Now we convert the array of indices into their characters.</p></div>
+      <img src="/images/fourth-step.png" alt="code snippet of the first decryption function">
+      <p>This returns the following string.</p>
+      <div class="result-container"><div class="result5"></div></div>
+      <p>The string is then parsed to return the origninal message.</p>
+      <div class="result-container"><div class="result6"></div></div>
+    </div>
+    <h2>Final Thoughts and Further Consideration</h2>
+    <p>There are a lot of improvements that could be made to this algorithm.</p>
+    <p>First, the code needs to be reviewed and refactored for readability and scalability.</p>
+    <p>Next, the first array could be shuffled first, then the first incryption could be run</p>
+    <p>then the scrambled incryption key could be passed with the encrypted message.</p>
+    <p>To be used for the final stage of the decryption.</p>
+    <br>
+    <p>Extra encoding steps could be added with their own shuffling. Or a type of hashing system</p>
+    <p>could be used during one of the encoding steps.</p>
+    <p>Of course extending the character set to include all punctuation and capitalization.</p>
   </div>
-  
+  <footer>open source</footer>
 </body>
 </html>
