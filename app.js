@@ -79,10 +79,31 @@ const decryptionHolder = firstDeCrypt(yourEncryptedString)
 
 console.log(decryptionHolder)
 
-const finalReversion = function() {
+//we receive an array containing the indices of the letters that
+//need to be returned
+//we iterate over the array containing the indices
+
+const finalReversion = function(decryptionHolder) {
   const firstCypher = [ 
     'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 
     'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v',
     'w', 'x', 'y', 'z', '.', ',', ' ' 
   ];
-}
+
+  let utilityHolder = [];
+  
+  for (let i = 0; i < decryptionHolder.length; i++) {
+    let canidate = decryptionHolder[i];
+
+    const kanji = firstCypher[canidate];
+    utilityHolder.push(kanji);
+  };
+
+  return utilityHolder;
+};
+
+const finalVersion = finalReversion(decryptionHolder);
+
+const ultimateVersion = finalVersion.toString();
+const runningOutOfVariableNames = ultimateVersion.replaceAll(',', '');
+console.log(runningOutOfVariableNames);
