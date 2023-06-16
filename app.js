@@ -1,4 +1,4 @@
-const testString = 'test';
+const testString = 'zoology is quite wizard';
 // take a string and map over it comparing the character to the
 //one in the array returning the index of that character
 
@@ -105,5 +105,6 @@ const finalReversion = function(decryptionHolder) {
 const finalVersion = finalReversion(decryptionHolder);
 
 const ultimateVersion = finalVersion.toString();
+console.log(ultimateVersion);
 const runningOutOfVariableNames = ultimateVersion.replaceAll(',', '');
 console.log(runningOutOfVariableNames);
