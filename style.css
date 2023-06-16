@@ -14,7 +14,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: baseline;
+  align-items: center;
   min-height: 100vh;
 }
 
@@ -32,10 +32,22 @@ header {
 
 .label {
   margin: 1em;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  width: 20vw;
 }
 
 .utility-container {
   display: flex;
+}
+
+.info {
+  padding: 2em;
+}
+
+img {
+  padding: 1em;
 }
 
 .input {
