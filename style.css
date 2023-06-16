@@ -44,10 +44,15 @@ header {
 
 .info {
   padding: 2em;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
 }
 
 img {
   padding: 1em;
+  width: 40vw;
+  margin: 2em;
 }
 
 .input {
@@ -91,4 +96,17 @@ img {
 
 .search__btn:hover {
   background-color: rgba(54, 54, 56, 1);
+}
+
+.result, .result-container {
+  border: 1px solid gray;
+  background-color: #53535f;
+  padding: 1em;
+  width: fit-content;
+  border-radius: 4px;
+  margin: 2em;
+}
+
+.result-container {
+  display: flex;
 }
