@@ -1,3 +1,21 @@
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyChiUpuGDLNS3NA-aowKV_378vON5n_2F8",
+  authDomain: "ternary-encryption-algo-demo.firebaseapp.com",
+  projectId: "ternary-encryption-algo-demo",
+  storageBucket: "ternary-encryption-algo-demo.appspot.com",
+  messagingSenderId: "426470549136",
+  appId: "1:426470549136:web:6bd6cc9945fb1cabef5a15"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+
 const testString = document.getElementById('msg').value;
 // take a string and map over it comparing the character to the
 //one in the array returning the index of that character
