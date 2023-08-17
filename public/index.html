@@ -6,6 +6,23 @@
   <link rel="stylesheet" href="style.css">
   <script src="app.js" defer></script>
   <title>cypher</title>
+   <!-- update the version number as needed -->
+   <script defer src="/__/firebase/10.1.0/firebase-app-compat.js"></script>
+   <!-- include only the Firebase features as you need -->
+   <script defer src="/__/firebase/10.1.0/firebase-auth-compat.js"></script>
+   <script defer src="/__/firebase/10.1.0/firebase-database-compat.js"></script>
+   <script defer src="/__/firebase/10.1.0/firebase-firestore-compat.js"></script>
+   <script defer src="/__/firebase/10.1.0/firebase-functions-compat.js"></script>
+   <script defer src="/__/firebase/10.1.0/firebase-messaging-compat.js"></script>
+   <script defer src="/__/firebase/10.1.0/firebase-storage-compat.js"></script>
+   <script defer src="/__/firebase/10.1.0/firebase-analytics-compat.js"></script>
+   <script defer src="/__/firebase/10.1.0/firebase-remote-config-compat.js"></script>
+   <script defer src="/__/firebase/10.1.0/firebase-performance-compat.js"></script>
+   <!-- 
+     initialize the SDK after all desired features are loaded, set useEmulator to false
+     to avoid connecting the SDK to running emulators.
+   -->
+   <script defer src="/__/firebase/init.js?useEmulator=true"></script>
 </head>
 <body>
   <div class="app">
@@ -29,7 +46,7 @@
     </div>
     <div class="info">
       <div class="card-title"><h1>2.</h1><p> On clicking the search icon the following function is run:</p></div>
-      <img src="/images/firrstEncryption.png" alt="code snippet of the first encryption function">
+      <img src="../images/firrstEncryption.png" alt="code snippet of the first encryption function">
       <br>
       <p>It takes the message that the user input and iterates over the string</p>
       <p>comparing each character in the message to the elements in the array </p>
@@ -45,7 +62,7 @@
     </div>
     <div class="info">
       <div class="card-title"><h1>3.</h1><p>Next the array of decimal numbers is converted to an array of ternary numbers </p></div>
-      <img src="/images/secondEncryption.png" alt="code snippet of the second encryption function">
+      <img src="../images/secondEncryption.png" alt="code snippet of the second encryption function">
       <p>This is what the ternary array would look like for our input:</p>
      
       <br>
@@ -56,7 +73,7 @@
       <div class="card-title"><h1>4.</h1><p>Now we begin the decryption process.</p></div>
       <p>The array of ternary numbers is converted back to decimal.</p>
       <p>This function I wrote myself because there is not a ternary notation in javascript.</p>
-      <img src="/images/thirdStep.png" alt="code snippet of the first decryption function">
+      <img src="../images/thirdStep.png" alt="code snippet of the first decryption function">
       <p>The maximum value of our numbers in ternary notation would be 222, which represents </p>
       <p>the decimal number 26. This is because our origninal encryption key was the array of </p>
       <p>the alphabet plus a final element to represent a space.</p>
@@ -65,7 +82,7 @@
     <div class="result-container">[<div class="result4"></div>]</div>
     <div class="info">
       <div class="card-title"><h1>5. </h1><p>Now we convert the array of indices into their characters.</p></div>
-      <img src="/images/fourth-step.png" alt="code snippet of the first decryption function">
+      <img src="../images/fourth-step.png" alt="code snippet of the first decryption function">
       <p>This returns the following string.</p>
       <div class="result-container"><div class="result5"></div></div>
       <p>The string is then parsed to return the origninal message.</p>
@@ -83,5 +100,61 @@
     <p>Of course extending the character set to include all punctuation and capitalization.</p>
   </div>
   <footer><a id="nav-link" href="https://github.com/SalamanderCtesiphon/quaternary-encryption-algo">SalamanderCtesiphon</a> &#169 <span id="year"></span></footer>
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyAnGwJMgDJTgroDiCOFkp1418XxINJf4kU",
+      authDomain: "encryption-blog-page.firebaseapp.com",
+      projectId: "encryption-blog-page",
+      storageBucket: "encryption-blog-page.appspot.com",
+      messagingSenderId: "856766019711",
+      appId: "1:856766019711:web:73fb3cd97b4b1492b5674a"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const loadEl = document.querySelector('#load');
+        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+        // // The Firebase SDK is initialized and available here!
+        //
+        // firebase.auth().onAuthStateChanged(user => { });
+        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
+        // firebase.firestore().doc('/foo/bar').get().then(() => { });
+        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
+        // firebase.messaging().requestPermission().then(() => { });
+        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
+        // firebase.analytics(); // call to activate
+        // firebase.analytics().logEvent('tutorial_completed');
+        // firebase.performance(); // call to activate
+        //
+        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+
+        try {
+          let app = firebase.app();
+          let features = [
+            'auth', 
+            'database', 
+            'firestore',
+            'functions',
+            'messaging', 
+            'storage', 
+            'analytics', 
+            'remoteConfig',
+            'performance',
+          ].filter(feature => typeof app[feature] === 'function');
+          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
+        } catch (e) {
+          console.error(e);
+          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
+        }
+      });
+  </script>
 </body>
 </html>
