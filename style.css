@@ -135,3 +135,13 @@ footer {
   align-items: center;
   justify-content: center;
 }
+
+#nav-link {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+
+#nav-link:hover {
+  color: purple;
+}
